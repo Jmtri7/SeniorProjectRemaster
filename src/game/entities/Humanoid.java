@@ -4,8 +4,16 @@ package game.entities;
 import engine.GameContainer;
 import engine.Renderer;
 import engine.gfx.ImageTile;
+import engine.gfx.Light;
 
 import game.board.Tile;
+
+import java.awt.event.KeyEvent;
+import java.util.HashMap;
+import java.util.Map;
+import java.lang.NullPointerException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Humanoid extends Creature {
 	protected ImageTile head;

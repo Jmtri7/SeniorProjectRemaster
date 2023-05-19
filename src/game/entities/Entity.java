@@ -11,6 +11,10 @@ import game.AudioLoader;
 
 import game.board.Tile;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.awt.event.KeyEvent;
+
 // A sprite on the game board
 public class Entity extends Sprite {
 	protected Species species;

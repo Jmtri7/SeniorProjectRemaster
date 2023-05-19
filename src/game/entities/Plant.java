@@ -1,6 +1,10 @@
 // by: James Trinity
 package game.entities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.awt.event.KeyEvent;
+
 import engine.GameContainer;
 import engine.Renderer;
 import engine.gfx.ImageTile;

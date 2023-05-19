@@ -3,11 +3,14 @@ package game.board;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 import engine.GameContainer;
 import engine.Renderer;
 import engine.gfx.Image;
 import engine.gfx.ImageTile;
+import engine.gfx.Light;
 import engine.audio.SoundClip;
 
 import game.Camera;

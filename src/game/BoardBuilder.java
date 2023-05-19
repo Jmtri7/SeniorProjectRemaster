@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.List;
 
 import engine.gfx.Image;
 import engine.gfx.ImageTile;
@@ -22,6 +23,7 @@ import game.entities.Humanoid;
 import game.entities.Projectile;
 import game.entities.Item;
 import game.entities.Equipment;
+import game.entities.Inventory;
 import game.entities.Species;
 import game.entities.Faction;
 import game.entities.Wall;
@@ -30,7 +32,7 @@ import game.entities.Portal;
 public class BoardBuilder {
 	static void SavePlayer(Creature pc) {
 		try {
-			FileWriter saveWriter = new FileWriter("/src/res/save/player.txt");
+			FileWriter saveWriter = new FileWriter("res/save/player.txt");
 			String saveData = "";
 
 			// board data
@@ -80,7 +82,7 @@ public class BoardBuilder {
 		Creature pc;
 
 		try {
-			File assetData = new File("/src/res/save/player.txt");
+			File assetData = new File("res/save/player.txt");
 			Scanner scanner = new Scanner(assetData);
 			String line = "";
 			
@@ -154,7 +156,7 @@ public class BoardBuilder {
 		AudioLoader.loadAudio("mining", "/res/sounds/mining.wav");
 
 		try {
-			File assetData = new File("src/res/world/assetData.txt");
+			File assetData = new File("res/world/assetData.txt");
 			Scanner scanner = new Scanner(assetData);
 			String line = "";
 
@@ -169,7 +171,7 @@ public class BoardBuilder {
 
 					name = line;
 
-					AudioLoader.loadAudio(name, "src/res/music/" + name + ".wav");
+					AudioLoader.loadAudio(name, "/res/music/" + name + ".wav");
 
 					scanner.nextLine();
 					line = scanner.nextLine();
@@ -403,7 +405,7 @@ public class BoardBuilder {
 		Board gameBoard = null;
 
 		try {
-			File mapData = new File("src/res/world/" + mapName + "/mapData.txt");
+			File mapData = new File("res/world/" + mapName + "/mapData.txt");
 			Scanner scanner = new Scanner(mapData);
 			String line = "";
 
@@ -419,8 +421,8 @@ public class BoardBuilder {
 
 				// board layout
 				gameBoard = new Board(
-					new Image("src/res/world/" + mapName + "/tileMap.png"),
-					new Image("src/res/world/" + mapName + "/structureMap.png"),
+					new Image("/res/world/" + mapName + "/tileMap.png"),
+					new Image("/res/world/" + mapName + "/structureMap.png"),
 					tileSize
 					);
 
@@ -453,7 +455,7 @@ public class BoardBuilder {
 					line = scanner.nextLine();
 					SoundClip music;
 					if(line.equals("null")) music = null;
-					else music = AudioLoader.safeLoad(line, "src/res/music/" + line + ".wav");
+					else music = AudioLoader.safeLoad(line, "/res/music/" + line + ".wav");
 
 					gameBoard.addZone(
 						x, y,

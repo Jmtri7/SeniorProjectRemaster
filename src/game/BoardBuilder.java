@@ -32,7 +32,7 @@ import game.entities.Portal;
 public class BoardBuilder {
 	static void SavePlayer(Creature pc) {
 		try {
-			FileWriter saveWriter = new FileWriter("res/save/player.txt");
+			FileWriter saveWriter = new FileWriter("src/save/player.txt");
 			String saveData = "";
 
 			// board data
@@ -82,7 +82,7 @@ public class BoardBuilder {
 		Creature pc;
 
 		try {
-			File assetData = new File("res/save/player.txt");
+			File assetData = new File("src/save/player.txt");
 			Scanner scanner = new Scanner(assetData);
 			String line = "";
 			
@@ -156,7 +156,7 @@ public class BoardBuilder {
 		AudioLoader.loadAudio("mining", "/res/sounds/mining.wav");
 
 		try {
-			File assetData = new File("res/world/assetData.txt");
+			File assetData = new File("src/res/world/assetData.txt");
 			Scanner scanner = new Scanner(assetData);
 			String line = "";
 
@@ -405,7 +405,7 @@ public class BoardBuilder {
 		Board gameBoard = null;
 
 		try {
-			File mapData = new File("res/world/" + mapName + "/mapData.txt");
+			File mapData = new File("src/res/world/" + mapName + "/mapData.txt");
 			Scanner scanner = new Scanner(mapData);
 			String line = "";
 

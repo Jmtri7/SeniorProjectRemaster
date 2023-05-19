@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SeniorProjectRemaster:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SeniorProjectRemaster_jar</output-path>
+    <root id="archive" name="SeniorProjectRemaster.jar">
+      <element id="module-output" name="SeniorProjectRemaster" />
+    </root>
+  </artifact>
+</component>

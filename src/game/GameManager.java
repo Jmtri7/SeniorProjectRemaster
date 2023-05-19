@@ -78,8 +78,7 @@ public class GameManager extends AbstractGame {
 			loading = true;
 		}
 	}
-
-	public static void main(String args[]) {
+	public static void start() {
 		GameContainer gc = new GameContainer(new GameManager());
 		gc.start();
 	}
